@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 public class UserValidator {
     private static final String firstNamePattern = "^[A-Z]{1}[a-z]{2,}$"; //regex
     private static final String lastNamePattern = "^[A-Z]{1}[a-z]{2,}$"; //regex
+    private static final String emailIDPattern = "^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@([0-9a-zA-Z][-]?)+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?$"; //regex
 
     public boolean  validateFirstName(String fName){
         Pattern pattern = Pattern.compile(firstNamePattern);
@@ -16,4 +17,8 @@ public class UserValidator {
         return pattern2.matcher(lName).matches();
     }
 
+    public boolean validateEmailAddress(String email) {
+        Pattern pattern3 = Pattern.compile(emailIDPattern);
+        return pattern3.matcher(email).matches();
+    }
 }

@@ -23,4 +23,11 @@ public class UserValidatorTest
 //        Assert.assertEquals(true, result); // can also be performed with assertTrue.
         Assert.assertTrue(result);
     }
+    @Test
+    public void givenEmailIDeWhenValidShouldReturnTrue() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateEmailAddress("abc+100@yahoo.com");
+//        Assert.assertEquals(true, result); // can also be performed with assertTrue.
+        Assert.assertTrue(result);
+    }
 }
