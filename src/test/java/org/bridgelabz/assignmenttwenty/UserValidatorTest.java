@@ -16,4 +16,11 @@ public class UserValidatorTest
         Assert.assertEquals(true, result);
 //        Assert.assertTrue(result); // can also be performed with assertTrue.
     }
+    @Test
+    public void givenLastNameWhenProperShouldReturnTrue() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateLastName("Jadhav");
+//        Assert.assertEquals(true, result); // can also be performed with assertTrue.
+        Assert.assertTrue(result);
+    }
 }
