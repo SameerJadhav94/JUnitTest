@@ -9,6 +9,7 @@ public class UserValidator {
     private static final  String mobileNumberPattern = "(0|91)*[ ][7-9][0-9]{9}"; //regex
     private static final  String passwordPattern1 = "^[a-zA-Z]{8,}$"; //regex
     private static final  String passwordPattern2 = "^(?=.*[A-Z])[A-Za-z]{8,}$"; //regex
+    private static final  String passwordPattern3 = "^(?=.*[0-9])(?=.*[A-Z])[A-Za-z0-9]{8,}$"; //regex
 
     public boolean  validateFirstName(String fName){
         Pattern pattern = Pattern.compile(firstNamePattern);
@@ -38,6 +39,11 @@ public class UserValidator {
     public boolean validatePasswordPattern2(String passwordPattern) {
         Pattern pattern5 = Pattern.compile(passwordPattern2);
         return pattern5.matcher(passwordPattern).matches();
+    }
+
+    public boolean validatePasswordPattern3(String passwordPattern) {
+        Pattern pattern6 = Pattern.compile(passwordPattern3);
+        return pattern6.matcher(passwordPattern).matches();
     }
 
 }

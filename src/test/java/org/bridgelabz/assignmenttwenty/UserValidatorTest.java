@@ -52,4 +52,12 @@ public class UserValidatorTest
 //        Assert.assertEquals(true, result); // can also be performed with assertTrue.
         Assert.assertTrue(result);
     }
+    @Test
+    public void givenPasswordWhenValidPattern3ShouldReturnTrue() {
+        UserValidator validator = new UserValidator();
+//        boolean result = validator.validatePasswordPattern2("passwordsam"); // This case should fail as there is not at least one uppercase character
+        boolean result = validator.validatePasswordPattern3("passwordSam19");
+//        Assert.assertEquals(true, result); // can also be performed with assertTrue.
+        Assert.assertTrue(result);
+    }
 }
