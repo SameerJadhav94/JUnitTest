@@ -37,4 +37,11 @@ public class UserValidatorTest
 //        Assert.assertEquals(true, result); // can also be performed with assertTrue.
         Assert.assertTrue(result);
     }
+    @Test
+    public void givenPasswordWhenValidPattern1ShouldReturnTrue() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validatePasswordPattern1("PassWordSam");
+//        Assert.assertEquals(true, result); // can also be performed with assertTrue.
+        Assert.assertTrue(result);
+    }
 }
