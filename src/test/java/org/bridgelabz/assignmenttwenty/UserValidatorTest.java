@@ -30,4 +30,11 @@ public class UserValidatorTest
 //        Assert.assertEquals(true, result); // can also be performed with assertTrue.
         Assert.assertTrue(result);
     }
+    @Test
+    public void givenMobileNumberWhenValidFormatShouldReturnTrue() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateMobileNumber("0 7568438745");
+//        Assert.assertEquals(true, result); // can also be performed with assertTrue.
+        Assert.assertTrue(result);
+    }
 }
