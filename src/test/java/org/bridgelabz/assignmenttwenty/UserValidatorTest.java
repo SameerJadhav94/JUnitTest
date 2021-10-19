@@ -89,4 +89,6 @@ public class UserValidatorTest {
             Assert.assertTrue(element);
         }
     }
+
+
 }
