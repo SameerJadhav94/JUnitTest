@@ -72,4 +72,21 @@ public class UserValidatorTest {
 //        Assert.assertEquals(true, result); // can also be performed with assertTrue.
         Assert.assertTrue(result);
     }
+    @Test
+    public void givenEmailIDSamplesWhenValidShouldReturnTrue() {
+        UserValidator validator = new UserValidator();
+        boolean result1 = validator.validateEmailAddress("abc+100@yahoo.com");
+        boolean result2 = validator.validateEmailAddress("abc@yahoo.com");
+        boolean result3 = validator.validateEmailAddress("abc-100@yahoo.com");
+        boolean result4 = validator.validateEmailAddress("abc.100@yahoo.com");
+        boolean result5 = validator.validateEmailAddress("abc111@abc.com");
+        boolean result6 = validator.validateEmailAddress("abc-100@abc.net");
+        boolean result7 = validator.validateEmailAddress("abc.100@abc.com.au");
+        boolean result8 = validator.validateEmailAddress("abc@1.com");
+        boolean result9 = validator.validateEmailAddress("abc@gmail.com.com");
+        boolean [] test = {result1, result2, result3, result4, result5, result6, result7, result8, result9};
+        for (boolean element:test) {
+            Assert.assertTrue(element);
+        }
+    }
 }
