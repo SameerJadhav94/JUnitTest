@@ -12,6 +12,7 @@ public class UserValidator {
     private static final String passwordPattern3 = "^(?=.*[0-9])(?=.*[A-Z])[A-Za-z0-9]{8,}$"; //regex
     private static final String passwordPattern4 = "^(?=.*[0-9])(?=.*[A-Z])(?=.*([$&+,:;=?@#|/'<>.^*()%!-]))(?=.{8,}$).*$"; //regex
 
+
     public boolean validateFirstName(String fName) {
         Pattern pattern = Pattern.compile(firstNamePattern);
         return pattern.matcher(fName).matches();
@@ -51,5 +52,7 @@ public class UserValidator {
         Pattern pattern7 = Pattern.compile(passwordPattern4);
         return pattern7.matcher(passwordPattern).matches();
     }
+
+
 
 }
